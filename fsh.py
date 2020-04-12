@@ -60,14 +60,14 @@ else:
         f.write("https://instagram.com")
         f.close()
     elif used == "2":
-        f = open("vk/cocation.location", 'w')
+        f = open("vk/location.location", 'w')
         f.write("https://vk.com")
         f.close()
     else:
-        f = open("vk/cocation.location", 'w')
+        f = open("vk/location.location", 'w')
         f.write("https://google.com")
         f.close()
-        f = open("instagram/cocation.location", 'w')
+        f = open("instagram/location.location", 'w')
         f.write("https://google.com")
         f.close()
 if ports == "":
